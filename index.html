@@ -3,27 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Oak Massage | Relaxation & Therapeutic Massage in Glendale</title>
-  <meta name="description" content="Oak Massage in Glendale, CA offers relaxation massage, deep tissue massage, four hands massage, cupping, guasha, and essential oil add-ons in a calm private space." />
+  <title>Jade Massage | Full Body Massage in Renton, WA</title>
+  <meta name="description" content="Jade Massage in Renton, WA offers professional full body massage with complimentary hot stones. Open daily 10:00 AM - 10:00 PM." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #f6f1e9;
-      --bg-deep: #efe3d2;
-      --ink: #2b2118;
-      --muted: #766a5f;
-      --brand: #7a5a36;
-      --brand-2: #b58a57;
-      --brand-3: #d7ba8e;
-      --card: rgba(255, 252, 247, 0.76);
-      --border: rgba(122, 90, 54, 0.18);
-      --shadow: 0 24px 80px rgba(43, 33, 24, 0.14);
+      --jade: #2e7d68;
+      --jade-dark: #16473c;
+      --jade-soft: #dceee8;
+      --cream: #f8f3ea;
+      --sand: #e8dcc9;
+      --ink: #182521;
+      --muted: #6c7772;
+      --white: #ffffff;
+      --glass: rgba(255, 255, 255, 0.72);
+      --shadow: 0 24px 70px rgba(24, 37, 33, 0.16);
       --radius: 28px;
-      --ease: cubic-bezier(.2,.8,.2,1);
     }
 
     * {
@@ -34,30 +33,15 @@
 
     html {
       scroll-behavior: smooth;
-      overflow-x: hidden;
     }
 
     body {
-      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background:
-        radial-gradient(circle at 18% 8%, rgba(215,186,142,.35), transparent 28%),
-        radial-gradient(circle at 88% 18%, rgba(122,90,54,.16), transparent 30%),
-        linear-gradient(180deg, #f8f3eb 0%, #efe3d2 48%, #f7f0e6 100%);
+      font-family: "Inter", sans-serif;
       color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(46, 125, 104, 0.12), transparent 35%),
+        linear-gradient(180deg, #fffaf1 0%, #f8f3ea 45%, #edf7f3 100%);
       overflow-x: hidden;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      z-index: -3;
-      pointer-events: none;
-      background-image:
-        linear-gradient(rgba(122, 90, 54, 0.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(122, 90, 54, 0.035) 1px, transparent 1px);
-      background-size: 54px 54px;
-      mask-image: linear-gradient(to bottom, rgba(0,0,0,.7), transparent 92%);
     }
 
     a {
@@ -66,206 +50,119 @@
     }
 
     img {
+      max-width: 100%;
       display: block;
-      width: 100%;
     }
 
-    .container {
-      width: min(1180px, calc(100% - 40px));
-      margin-inline: auto;
-      position: relative;
-      z-index: 2;
-    }
-
-    .nav {
+    .navbar {
       position: fixed;
       top: 18px;
       left: 50%;
       transform: translateX(-50%);
-      width: min(1180px, calc(100% - 28px));
       z-index: 1000;
+      width: min(1120px, calc(100% - 28px));
+      padding: 14px 18px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 18px;
-      padding: 14px 18px;
-      border: 1px solid rgba(255,255,255,.42);
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      background: rgba(255, 255, 255, 0.62);
+      backdrop-filter: blur(18px);
       border-radius: 999px;
-      background: rgba(60, 43, 28, 0.34);
-      backdrop-filter: blur(20px);
-      box-shadow: 0 16px 50px rgba(0,0,0,.16);
-      transition: background .35s var(--ease), padding .35s var(--ease);
-    }
-
-    .nav.scrolled {
-      background: rgba(43,33,24,.72);
-      padding: 10px 16px;
+      box-shadow: 0 14px 40px rgba(24, 37, 33, 0.12);
     }
 
     .brand {
       display: flex;
       align-items: center;
       gap: 10px;
-      color: #fff9ef;
       font-weight: 800;
-      letter-spacing: .05em;
+      letter-spacing: 0.03em;
+      color: var(--jade-dark);
       white-space: nowrap;
     }
 
     .brand-mark {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
+      width: 34px;
+      height: 34px;
       display: grid;
       place-items: center;
-      background: linear-gradient(135deg, var(--brand-3), var(--brand-2));
-      color: #3c2b1d;
+      border-radius: 50%;
+      background: linear-gradient(145deg, var(--jade), #9fcfbc);
+      color: white;
       font-family: "Cormorant Garamond", serif;
-      font-size: 24px;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,.5);
+      font-size: 23px;
+      box-shadow: 0 10px 20px rgba(46, 125, 104, 0.28);
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 4px;
-      list-style: none;
+      gap: 18px;
+      font-size: 0.92rem;
+      color: #2d3c37;
     }
 
     .nav-links a {
-      display: inline-flex;
-      padding: 10px 13px;
-      border-radius: 999px;
-      color: rgba(255,249,239,.9);
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: .02em;
-      transition: background .25s var(--ease), color .25s var(--ease);
+      position: relative;
+      opacity: 0.86;
+      transition: 0.25s ease;
     }
 
-    .nav-links a:hover,
-    .nav-links a.active {
-      background: rgba(255,255,255,.2);
-      color: #fff;
+    .nav-links a:hover {
+      opacity: 1;
+      color: var(--jade);
     }
 
     .nav-cta {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 42px;
-      padding: 0 18px;
+      padding: 11px 17px;
       border-radius: 999px;
-      color: #2b2118;
-      background: linear-gradient(135deg, #fff1ce, #d7a866);
-      font-size: 13px;
-      font-weight: 900;
-      box-shadow: 0 12px 30px rgba(215,168,102,.28);
-      white-space: nowrap;
+      background: var(--jade);
+      color: white !important;
+      box-shadow: 0 12px 26px rgba(46, 125, 104, 0.28);
     }
 
-    .menu-btn {
+    .mobile-toggle {
       display: none;
       border: 0;
-      width: 44px;
-      height: 44px;
+      background: var(--jade);
+      color: white;
       border-radius: 999px;
-      background: rgba(255,255,255,.18);
-      color: #fff;
-      cursor: pointer;
-      font-size: 22px;
-    }
-
-    .section {
-      position: relative;
-      padding: 120px 0;
-      overflow: hidden;
-    }
-
-    .section-header {
-      max-width: 760px;
-      margin-bottom: 54px;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 16px;
-      color: var(--brand);
-      text-transform: uppercase;
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: .2em;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 42px;
-      height: 1px;
-      background: currentColor;
-      opacity: .55;
-    }
-
-    h1, h2, h3 {
-      font-family: "Cormorant Garamond", Georgia, serif;
-      line-height: .96;
-      letter-spacing: -.035em;
-    }
-
-    h1 {
-      font-size: clamp(58px, 8vw, 124px);
-      color: #fff8ea;
-      text-shadow: 0 18px 54px rgba(0,0,0,.28);
-    }
-
-    h2 {
-      font-size: clamp(42px, 5vw, 78px);
-      color: var(--ink);
-    }
-
-    h3 {
-      font-size: clamp(28px, 3vw, 42px);
-    }
-
-    p {
-      color: var(--muted);
-      line-height: 1.78;
+      padding: 10px 13px;
+      font-weight: 700;
     }
 
     .hero {
-      min-height: 100svh;
+      min-height: 100vh;
+      position: relative;
       display: grid;
       place-items: center;
+      overflow: hidden;
+      padding: 120px 20px 80px;
       isolation: isolate;
-      padding: 110px 0 60px;
-      color: #fff;
-      background: #3b3128;
     }
 
-    .hero-carousel {
+    .hero-bg {
       position: absolute;
       inset: 0;
       z-index: -3;
-      overflow: hidden;
-      background: linear-gradient(135deg, #8c7b68, #c1ab8f);
     }
 
-    .hero-slide {
+    .hero-bg img {
       position: absolute;
-      inset: -7vh -4vw;
-      background-position: center;
-      background-size: cover;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
       opacity: 0;
       transform: scale(1.08);
-      filter: brightness(1.08) contrast(1.06) saturate(1.08);
-      transition: opacity 1.6s var(--ease), transform 8s linear;
-      will-change: transform, opacity;
+      transition: opacity 1.4s ease, transform 7s ease;
+      filter: saturate(0.95) contrast(1.02);
     }
 
-    .hero-slide.active {
+    .hero-bg img.active {
       opacity: 1;
-      transform: scale(1.02);
+      transform: scale(1);
     }
 
     .hero::before {
@@ -274,64 +171,100 @@
       inset: 0;
       z-index: -2;
       background:
-        radial-gradient(circle at 20% 20%, rgba(255,232,190,.34), transparent 30%),
-        linear-gradient(90deg, rgba(45,35,26,.62) 0%, rgba(70,54,39,.38) 45%, rgba(120,96,67,.16) 100%),
-        linear-gradient(180deg, rgba(0,0,0,.16), rgba(0,0,0,.34));
+        linear-gradient(90deg, rgba(15, 35, 29, 0.76), rgba(15, 35, 29, 0.28), rgba(248, 243, 234, 0.18)),
+        radial-gradient(circle at 70% 20%, rgba(255, 255, 255, 0.35), transparent 28%);
     }
 
-    .hero::after {
-      content: "";
+    .floating-orb {
       position: absolute;
-      left: 0;
-      right: 0;
-      bottom: -1px;
-      height: 180px;
+      border-radius: 50%;
       z-index: -1;
-      background: linear-gradient(to bottom, transparent, var(--bg));
+      background: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      animation: floatOrb 9s ease-in-out infinite alternate;
     }
 
-    .hero-grid {
+    .orb-one {
+      width: 220px;
+      height: 220px;
+      right: 8%;
+      top: 22%;
+    }
+
+    .orb-two {
+      width: 130px;
+      height: 130px;
+      left: 10%;
+      bottom: 18%;
+      animation-delay: 1.6s;
+    }
+
+    @keyframes floatOrb {
+      from { transform: translate3d(0, 0, 0); }
+      to { transform: translate3d(0, -32px, 0); }
+    }
+
+    .hero-content {
+      width: min(1120px, 100%);
+      color: white;
       display: grid;
-      grid-template-columns: 1.05fr .95fr;
+      grid-template-columns: 1.15fr 0.85fr;
       align-items: center;
-      gap: 50px;
+      gap: 42px;
     }
 
-    .hero-copy {
-      transform: translate3d(0, var(--parallax-slow, 0px), 0);
-      will-change: transform;
-    }
-
-    .hero-kicker {
+    .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 12px;
-      padding: 10px 15px;
+      gap: 9px;
+      padding: 9px 14px;
       margin-bottom: 22px;
-      border: 1px solid rgba(255,255,255,.34);
       border-radius: 999px;
-      background: rgba(255,255,255,.16);
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.22);
       backdrop-filter: blur(12px);
-      color: rgba(255,249,239,.96);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: .16em;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
+      font-weight: 700;
     }
 
-    .hero-copy p {
-      max-width: 670px;
-      margin: 26px 0 34px;
-      color: rgba(255,249,239,.9);
-      font-size: clamp(17px, 2vw, 22px);
-      text-shadow: 0 8px 32px rgba(0,0,0,.18);
+    .eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #b7ead8;
+      box-shadow: 0 0 0 6px rgba(183, 234, 216, 0.16);
+    }
+
+    h1, h2, h3 {
+      font-family: "Cormorant Garamond", serif;
+      line-height: 0.98;
+    }
+
+    .hero h1 {
+      font-size: clamp(4rem, 8vw, 7.7rem);
+      max-width: 850px;
+      letter-spacing: -0.055em;
+      margin-bottom: 24px;
+      text-shadow: 0 14px 60px rgba(0, 0, 0, 0.22);
+    }
+
+    .hero p {
+      max-width: 640px;
+      font-size: clamp(1.05rem, 1.7vw, 1.28rem);
+      line-height: 1.75;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 30px;
     }
 
     .hero-actions {
       display: flex;
-      align-items: center;
-      gap: 16px;
       flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
     }
 
     .btn {
@@ -339,670 +272,113 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
-      min-height: 56px;
-      padding: 0 26px;
+      min-height: 52px;
+      padding: 0 24px;
+      border: 0;
       border-radius: 999px;
-      border: 1px solid transparent;
-      font-weight: 900;
       cursor: pointer;
-      transition: transform .3s var(--ease), box-shadow .3s var(--ease), background .3s var(--ease);
+      font-weight: 800;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #ffffff, #d8f2e7);
+      color: var(--jade-dark);
+      box-shadow: 0 22px 40px rgba(0, 0, 0, 0.24);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.14);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.34);
+      backdrop-filter: blur(12px);
     }
 
     .btn:hover {
       transform: translateY(-3px);
     }
 
-    .btn-primary {
-      color: #2b2118;
-      background: linear-gradient(135deg, #fff1ce, #d79d4e);
-      box-shadow: 0 18px 44px rgba(215,157,78,.35);
-    }
-
-    .btn-ghost {
-      color: #fff9ef;
-      border-color: rgba(255,255,255,.4);
-      background: rgba(255,255,255,.14);
-      backdrop-filter: blur(12px);
-    }
-
     .hero-card {
       justify-self: end;
-      width: min(430px, 100%);
-      padding: 22px;
-      border: 1px solid rgba(255,255,255,.28);
-      border-radius: 34px;
-      background: rgba(255,255,255,.18);
+      width: min(390px, 100%);
+      padding: 26px;
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.34);
       backdrop-filter: blur(20px);
-      box-shadow: 0 36px 120px rgba(0,0,0,.26);
-      transform: translate3d(0, var(--parallax-fast, 0px), 0);
-      will-change: transform;
+      box-shadow: var(--shadow);
+      color: white;
     }
 
-    .hero-card-inner {
-      overflow: hidden;
-      border-radius: 26px;
-      background: rgba(255,255,255,.9);
-      color: var(--ink);
+    .hero-card h3 {
+      font-size: 2rem;
+      margin-bottom: 12px;
     }
 
-    .hero-card-img {
-      height: 300px;
-      background-image: url("https://i.pinimg.com/1200x/dc/36/fe/dc36feaf9cc11bec29cc3de7834c539e.jpg");
-      background-size: cover;
-      background-position: center;
-      filter: brightness(1.04) contrast(1.04);
-    }
-
-    .hero-card-body {
-      padding: 24px;
-    }
-
-    .hero-card-body p {
-      margin-top: 8px;
-      font-size: 14px;
-    }
-
-    .hero-stats {
+    .hero-card ul {
+      list-style: none;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
+      gap: 13px;
       margin-top: 18px;
     }
 
-    .stat {
-      padding: 14px 10px;
-      border-radius: 18px;
-      background: rgba(122,90,54,.08);
-      text-align: center;
+    .hero-card li {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding-bottom: 13px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.24);
     }
 
-    .stat strong {
-      display: block;
-      font-size: 18px;
-      color: var(--brand);
+    .hero-card li:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
     }
 
-    .stat span {
-      display: block;
-      margin-top: 3px;
-      color: var(--muted);
-      font-size: 11px;
+    .section {
+      position: relative;
+      padding: 110px 20px;
+      overflow: hidden;
+    }
+
+    .container {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .section-header {
+      max-width: 780px;
+      margin-bottom: 50px;
+    }
+
+    .section-kicker {
+      color: var(--jade);
       font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: .07em;
+      letter-spacing: 0.12em;
+      font-size: 0.83rem;
+      margin-bottom: 12px;
     }
 
-    .scroll-cue {
-      position: absolute;
-      left: 50%;
-      bottom: 30px;
-      transform: translateX(-50%);
-      display: grid;
-      place-items: center;
-      width: 34px;
-      height: 54px;
-      border: 1px solid rgba(255,255,255,.5);
-      border-radius: 999px;
-      opacity: .88;
+    .section h2 {
+      font-size: clamp(2.7rem, 5vw, 5rem);
+      color: var(--jade-dark);
+      letter-spacing: -0.04em;
+      margin-bottom: 18px;
     }
 
-    .scroll-cue::after {
-      content: "";
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background: #fff;
-      animation: scrollDot 1.6s infinite;
-    }
-
-    @keyframes scrollDot {
-      0% { transform: translateY(-12px); opacity: 0; }
-      35% { opacity: 1; }
-      100% { transform: translateY(14px); opacity: 0; }
-    }
-
-    .float-orb {
-      position: absolute;
-      border-radius: 999px;
-      pointer-events: none;
-      filter: blur(.2px);
-      opacity: .58;
-      transform: translate3d(0, var(--parallax-medium, 0px), 0);
-      will-change: transform;
-    }
-
-    .orb-1 {
-      width: 250px;
-      height: 250px;
-      top: 18%;
-      right: -80px;
-      background: radial-gradient(circle, rgba(215,186,142,.46), transparent 68%);
-    }
-
-    .orb-2 {
-      width: 320px;
-      height: 320px;
-      left: -110px;
-      bottom: 8%;
-      background: radial-gradient(circle, rgba(122,90,54,.16), transparent 70%);
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      align-items: center;
-      gap: 54px;
-    }
-
-    .about-visual {
-      position: relative;
-      min-height: 560px;
-      transform: translate3d(0, var(--parallax-medium, 0px), 0);
-      will-change: transform;
-    }
-
-    .about-photo {
-      position: absolute;
-      overflow: hidden;
-      border-radius: 36px;
-      box-shadow: var(--shadow);
-      background: #d9c4a9;
-    }
-
-    .about-photo img {
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .about-photo.large {
-      inset: 0 12% 12% 0;
-    }
-
-    .about-photo.small {
-      right: 0;
-      bottom: 0;
-      width: 48%;
-      height: 45%;
-      border: 12px solid var(--bg);
-    }
-
-    .about-panel {
-      padding: 34px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      background: var(--card);
-      backdrop-filter: blur(18px);
-      box-shadow: var(--shadow);
-      transform: translate3d(0, var(--parallax-slow, 0px), 0);
-      will-change: transform;
-    }
-
-    .about-panel p + p {
-      margin-top: 18px;
-    }
-
-    .feature-row {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin-top: 28px;
-    }
-
-    .mini-feature {
-      padding: 18px 14px;
-      border: 1px solid rgba(122,90,54,.13);
-      border-radius: 22px;
-      background: rgba(255,255,255,.44);
-    }
-
-    .mini-feature strong {
-      display: block;
-      margin-bottom: 6px;
-      color: var(--brand);
-      font-size: 14px;
-    }
-
-    .mini-feature span {
+    .section-header p {
       color: var(--muted);
-      font-size: 13px;
-      line-height: 1.5;
-    }
-
-    .services {
-      background:
-        radial-gradient(circle at 15% 15%, rgba(215,186,142,.28), transparent 26%),
-        linear-gradient(180deg, rgba(255,255,255,.15), rgba(239,227,210,.72));
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .service-card {
-      position: relative;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      border-radius: 32px;
-      background: rgba(255,252,247,.72);
-      backdrop-filter: blur(20px);
-      box-shadow: 0 24px 70px rgba(43,33,24,.1);
-      transition: transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s var(--ease);
-    }
-
-    .service-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 34px 90px rgba(43,33,24,.16);
-      border-color: rgba(122,90,54,.28);
-    }
-
-    .service-media {
-      position: relative;
-      height: 250px;
-      overflow: hidden;
-      background:
-        radial-gradient(circle at 30% 20%, rgba(255,255,255,.55), transparent 32%),
-        linear-gradient(135deg, #d6bc94, #8a6741);
-    }
-
-    .service-slide {
-      position: absolute;
-      inset: 0;
-      background-size: cover;
-      background-position: center;
-      opacity: 0;
-      transform: scale(1.07);
-      transition: opacity .9s var(--ease), transform 5s linear;
-    }
-
-    .service-slide.active {
-      opacity: 1;
-      transform: scale(1);
-    }
-
-    .service-media::after {
-      content: "";
-      position: absolute;
-      inset: auto 0 0 0;
-      height: 52%;
-      background: linear-gradient(to top, rgba(43,33,24,.52), transparent);
-      pointer-events: none;
-    }
-
-    .carousel-dots {
-      position: absolute;
-      left: 18px;
-      bottom: 16px;
-      z-index: 3;
-      display: flex;
-      gap: 7px;
-    }
-
-    .carousel-dots span {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.5);
-      transition: width .35s var(--ease), background .35s var(--ease);
-    }
-
-    .carousel-dots span.active {
-      width: 24px;
-      background: #fff;
-    }
-
-    .service-body {
-      padding: 24px;
-    }
-
-    .service-topline {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 18px;
-      margin-bottom: 14px;
-    }
-
-    .service-body h3 {
-      font-size: 30px;
-      letter-spacing: -.02em;
-      line-height: 1.04;
-    }
-
-    .price {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px 13px;
-      border-radius: 999px;
-      background: rgba(122,90,54,.1);
-      color: var(--brand);
-      font-weight: 900;
-      white-space: nowrap;
-    }
-
-    .duration {
-      display: inline-flex;
-      margin-bottom: 14px;
-      color: var(--brand);
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-    }
-
-    .service-body p {
-      font-size: 14.5px;
-    }
-
-    .pricing-list {
-      display: grid;
-      gap: 10px;
-      margin: 20px 0 18px;
-      list-style: none;
-    }
-
-    .pricing-list li {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-      padding: 12px 14px;
-      border: 1px solid rgba(122,90,54,.12);
-      border-radius: 16px;
-      background: rgba(255,255,255,.44);
-      color: var(--muted);
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-    .pricing-list strong {
-      color: var(--brand);
-      font-weight: 900;
-      white-space: nowrap;
-    }
-
-    .gallery {
-      background:
-        radial-gradient(circle at 82% 8%, rgba(215,186,142,.28), transparent 28%),
-        linear-gradient(180deg, #f7f0e6, #efe3d2);
-    }
-
-    .masonry {
-      columns: 3 280px;
-      column-gap: 22px;
-    }
-
-    .masonry-item {
-      position: relative;
-      display: inline-block;
-      width: 100%;
-      margin: 0 0 22px;
-      overflow: hidden;
-      border-radius: 30px;
-      border: 1px solid rgba(255,255,255,.52);
-      background: rgba(255,252,247,.72);
-      box-shadow: 0 24px 70px rgba(43,33,24,.12);
-      break-inside: avoid;
-      transform: translateZ(0);
-    }
-
-    .masonry-item img {
-      width: 100%;
-      height: auto;
-      min-height: 260px;
-      object-fit: cover;
-      transition: transform .8s var(--ease), filter .8s var(--ease);
-    }
-
-    .masonry-item:nth-child(2n) img {
-      min-height: 360px;
-    }
-
-    .masonry-item:nth-child(3n) img {
-      min-height: 300px;
-    }
-
-    .masonry-item:hover img {
-      transform: scale(1.06);
-      filter: saturate(1.08) contrast(1.03);
-    }
-
-    .masonry-item::after {
-      content: "Oak Massage";
-      position: absolute;
-      left: 16px;
-      bottom: 16px;
-      padding: 9px 13px;
-      border-radius: 999px;
-      color: #fff8ea;
-      background: rgba(43,33,24,.48);
-      backdrop-filter: blur(12px);
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-    }
-
-    .reviews {
-      background:
-        radial-gradient(circle at 80% 0%, rgba(122,90,54,.12), transparent 30%),
-        linear-gradient(180deg, var(--bg), #f4eadc);
-    }
-
-    .marquee-wrap {
-      display: grid;
-      gap: 22px;
-      width: 100%;
-      overflow: hidden;
-      mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
-    }
-
-    .marquee {
-      display: flex;
-      gap: 22px;
-      width: max-content;
-      animation: marqueeLeft 42s linear infinite;
-    }
-
-    .marquee.reverse {
-      animation-name: marqueeRight;
-      animation-duration: 46s;
-    }
-
-    .review-card {
-      width: 360px;
-      min-height: 210px;
-      padding: 24px;
-      border: 1px solid var(--border);
-      border-radius: 28px;
-      background: rgba(255,252,247,.76);
-      backdrop-filter: blur(16px);
-      box-shadow: 0 18px 50px rgba(43,33,24,.08);
-    }
-
-    .stars {
-      color: #bd8846;
-      letter-spacing: 2px;
-      margin-bottom: 14px;
-    }
-
-    .review-card p {
-      font-size: 14.5px;
-      line-height: 1.72;
-    }
-
-    .review-author {
-      margin-top: 18px;
-      color: var(--ink);
-      font-weight: 900;
-    }
-
-    @keyframes marqueeLeft {
-      from { transform: translateX(0); }
-      to { transform: translateX(-50%); }
-    }
-
-    @keyframes marqueeRight {
-      from { transform: translateX(-50%); }
-      to { transform: translateX(0); }
-    }
-
-    .faq-grid {
-      display: grid;
-      grid-template-columns: .8fr 1.2fr;
-      gap: 42px;
-      align-items: start;
-    }
-
-    .faq-card {
-      overflow: hidden;
-      border: 1px solid var(--border);
-      border-radius: 30px;
-      background: rgba(255,252,247,.7);
-      backdrop-filter: blur(18px);
-      box-shadow: var(--shadow);
-    }
-
-    .faq-item + .faq-item {
-      border-top: 1px solid rgba(122,90,54,.14);
-    }
-
-    .faq-question {
-      width: 100%;
-      border: 0;
-      background: transparent;
-      color: var(--ink);
-      padding: 22px 24px;
-      cursor: pointer;
-      text-align: left;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-      font: inherit;
-      font-weight: 900;
-    }
-
-    .faq-question span:last-child {
-      width: 30px;
-      height: 30px;
-      flex: 0 0 auto;
-      border-radius: 999px;
-      display: grid;
-      place-items: center;
-      background: rgba(122,90,54,.1);
-      color: var(--brand);
-      transition: transform .3s var(--ease);
-    }
-
-    .faq-item.active .faq-question span:last-child {
-      transform: rotate(45deg);
-    }
-
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height .36s var(--ease);
-    }
-
-    .faq-answer p {
-      padding: 0 24px 24px;
-      font-size: 14.5px;
-    }
-
-    .contact {
-      color: #fff8ea;
-      background:
-        linear-gradient(180deg, rgba(43,33,24,.92), rgba(43,33,24,.82)),
-        url("https://i.pinimg.com/736x/70/cb/60/70cb60cfa74373d9c0a2e39d478f489e.jpg") center/cover fixed;
-    }
-
-    .contact h2,
-    .contact .eyebrow {
-      color: #fff8ea;
-    }
-
-    .contact p {
-      color: rgba(255,248,234,.75);
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: .85fr 1.15fr;
-      gap: 30px;
-      align-items: stretch;
-    }
-
-    .contact-info,
-    .map-card {
-      border: 1px solid rgba(255,255,255,.22);
-      border-radius: 34px;
-      background: rgba(255,255,255,.12);
-      backdrop-filter: blur(20px);
-      box-shadow: 0 32px 90px rgba(0,0,0,.22);
-      overflow: hidden;
-    }
-
-    .contact-info {
-      padding: 34px;
-    }
-
-    .info-list {
-      display: grid;
-      gap: 18px;
-      margin-top: 28px;
-      list-style: none;
-    }
-
-    .info-list li {
-      padding: 18px;
-      border-radius: 22px;
-      background: rgba(255,255,255,.1);
-      border: 1px solid rgba(255,255,255,.16);
-    }
-
-    .info-list strong {
-      display: block;
-      margin-bottom: 6px;
-      color: #e8c78f;
-      font-size: 12px;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-    }
-
-    .info-list span,
-    .info-list a {
-      color: rgba(255,248,234,.9);
-      line-height: 1.55;
-      font-weight: 700;
-    }
-
-    .map-card {
-      min-height: 470px;
-    }
-
-    .map-card iframe {
-      width: 100%;
-      height: 100%;
-      min-height: 470px;
-      border: 0;
-      filter: sepia(.15) saturate(.82) contrast(.95);
-    }
-
-    footer {
-      padding: 30px 0;
-      background: #241a12;
-      color: rgba(255,248,234,.7);
-      text-align: center;
-      font-size: 13px;
+      line-height: 1.8;
+      font-size: 1.05rem;
     }
 
     .reveal {
       opacity: 0;
-      transform: translateY(34px);
-      transition: opacity .85s var(--ease), transform .85s var(--ease);
+      transform: translateY(42px);
+      transition: opacity 0.9s ease, transform 0.9s ease;
     }
 
     .reveal.visible {
@@ -1010,640 +386,921 @@
       transform: translateY(0);
     }
 
-    .delay-1 { transition-delay: .08s; }
-    .delay-2 { transition-delay: .16s; }
-    .delay-3 { transition-delay: .24s; }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 28px;
+      align-items: stretch;
+    }
 
-    @media (max-width: 980px) {
-      .nav {
-        top: 12px;
-        border-radius: 26px;
-      }
+    .about-image {
+      min-height: 470px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
 
-      .menu-btn {
-        display: grid;
-        place-items: center;
+    .about-image img {
+      width: 100%;
+      height: 120%;
+      object-fit: cover;
+      transform: translateY(var(--py, 0));
+    }
+
+    .about-card {
+      padding: clamp(28px, 5vw, 52px);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(255, 255, 255, 0.78);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+    }
+
+    .about-card p {
+      color: var(--muted);
+      line-height: 1.9;
+      margin-bottom: 22px;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .feature {
+      padding: 18px;
+      border-radius: 22px;
+      background: var(--cream);
+      border: 1px solid rgba(46, 125, 104, 0.12);
+    }
+
+    .feature strong {
+      display: block;
+      color: var(--jade-dark);
+      margin-bottom: 7px;
+    }
+
+    .feature span {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .services {
+      background:
+        radial-gradient(circle at 15% 20%, rgba(46, 125, 104, 0.16), transparent 30%),
+        linear-gradient(180deg, rgba(255,255,255,0.2), rgba(220,238,232,0.65));
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .service-card {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      overflow: hidden;
+      border-radius: 34px;
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(255, 255, 255, 0.76);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(16px);
+    }
+
+    .service-media {
+      position: relative;
+      min-height: 430px;
+      overflow: hidden;
+      background: #ddd;
+    }
+
+    .service-media img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transform: scale(1.05);
+      transition: opacity 1s ease, transform 5s ease;
+    }
+
+    .service-media img.active {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .service-badge {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      z-index: 4;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.76);
+      backdrop-filter: blur(12px);
+      color: var(--jade-dark);
+      font-weight: 900;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.14);
+    }
+
+    .service-content {
+      padding: clamp(28px, 5vw, 52px);
+    }
+
+    .service-content h3 {
+      color: var(--jade-dark);
+      font-size: clamp(2.4rem, 4vw, 4.2rem);
+      letter-spacing: -0.045em;
+      margin-bottom: 17px;
+    }
+
+    .service-content p {
+      color: var(--muted);
+      line-height: 1.85;
+      margin-bottom: 20px;
+    }
+
+    .hot-stone {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 16px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #fff6e0, #dceee8);
+      color: var(--jade-dark);
+      font-weight: 900;
+      margin: 4px 0 22px;
+      border: 1px solid rgba(46, 125, 104, 0.16);
+    }
+
+    .pricing-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .price-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 17px 18px;
+      border-radius: 18px;
+      background: rgba(248, 243, 234, 0.82);
+      border: 1px solid rgba(46, 125, 104, 0.12);
+    }
+
+    .price-row span:first-child {
+      font-weight: 800;
+      color: var(--jade-dark);
+    }
+
+    .price-row span:last-child {
+      font-size: 1.22rem;
+      font-weight: 900;
+      color: var(--jade);
+    }
+
+    .booking {
+      background:
+        linear-gradient(135deg, rgba(22, 71, 60, 0.93), rgba(46, 125, 104, 0.82)),
+        url("https://i.pinimg.com/1200x/dc/36/fe/dc36feaf9cc11bec29cc3de7834c539e.jpg") center/cover fixed;
+      color: white;
+    }
+
+    .booking .section-kicker,
+    .booking h2,
+    .booking .section-header p {
+      color: white;
+    }
+
+    .booking-panel {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .booking-card {
+      padding: 26px;
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 24px 70px rgba(0,0,0,0.18);
+    }
+
+    .booking-card h3 {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+
+    .booking-card p {
+      color: rgba(255, 255, 255, 0.82);
+      line-height: 1.75;
+    }
+
+    .testimonials {
+      background: #fffaf1;
+    }
+
+    .marquee-wrap {
+      display: grid;
+      gap: 20px;
+      overflow: hidden;
+      mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+    }
+
+    .marquee {
+      display: flex;
+      gap: 20px;
+      width: max-content;
+      animation: scrollLeft 42s linear infinite;
+    }
+
+    .marquee.reverse {
+      animation: scrollRight 46s linear infinite;
+    }
+
+    .review-card {
+      width: 360px;
+      padding: 24px;
+      border-radius: 26px;
+      background: rgba(255, 255, 255, 0.86);
+      border: 1px solid rgba(46, 125, 104, 0.12);
+      box-shadow: 0 18px 46px rgba(24, 37, 33, 0.1);
+    }
+
+    .stars {
+      color: #d79b31;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
+    .review-card p {
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+
+    .review-card strong {
+      color: var(--jade-dark);
+    }
+
+    @keyframes scrollLeft {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    @keyframes scrollRight {
+      from { transform: translateX(-50%); }
+      to { transform: translateX(0); }
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 32px;
+      align-items: start;
+    }
+
+    .faq-note {
+      padding: 32px;
+      border-radius: 30px;
+      background: var(--jade-dark);
+      color: white;
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 120px;
+    }
+
+    .faq-note h3 {
+      font-size: 2.4rem;
+      margin-bottom: 14px;
+    }
+
+    .faq-note p {
+      line-height: 1.75;
+      color: rgba(255,255,255,0.82);
+    }
+
+    .accordion {
+      display: grid;
+      gap: 14px;
+    }
+
+    .faq-item {
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(46, 125, 104, 0.12);
+      box-shadow: 0 14px 38px rgba(24, 37, 33, 0.08);
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      border: 0;
+      background: transparent;
+      padding: 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      cursor: pointer;
+      color: var(--jade-dark);
+      font-weight: 900;
+      text-align: left;
+      font-size: 1rem;
+    }
+
+    .faq-question span {
+      font-size: 1.4rem;
+      transition: transform 0.25s ease;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.32s ease;
+    }
+
+    .faq-answer p {
+      padding: 0 22px 22px;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 220px;
+    }
+
+    .faq-item.active .faq-question span {
+      transform: rotate(45deg);
+    }
+
+    .contact {
+      background:
+        radial-gradient(circle at right top, rgba(46, 125, 104, 0.16), transparent 35%),
+        #edf7f3;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .contact-card {
+      padding: clamp(28px, 5vw, 44px);
+      border-radius: 32px;
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(255, 255, 255, 0.78);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(16px);
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 18px;
+      margin-top: 26px;
+    }
+
+    .contact-item {
+      padding: 18px;
+      border-radius: 20px;
+      background: var(--cream);
+      border: 1px solid rgba(46, 125, 104, 0.12);
+    }
+
+    .contact-item small {
+      display: block;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .contact-item strong,
+    .contact-item a {
+      color: var(--jade-dark);
+      font-size: 1.06rem;
+      font-weight: 900;
+      line-height: 1.5;
+    }
+
+    .map {
+      min-height: 500px;
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+    }
+
+    .map iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      filter: saturate(0.9) contrast(0.98);
+    }
+
+    footer {
+      padding: 34px 20px;
+      text-align: center;
+      color: rgba(255,255,255,0.78);
+      background: var(--jade-dark);
+    }
+
+    .parallax-soft {
+      transform: translateY(var(--parallax, 0));
+      transition: transform 0.06s linear;
+    }
+
+    @media (max-width: 920px) {
+      .mobile-toggle {
+        display: inline-flex;
       }
 
       .nav-links {
         position: absolute;
-        top: calc(100% + 10px);
+        top: calc(100% + 12px);
         left: 0;
         right: 0;
-        display: none;
-        grid-template-columns: 1fr;
-        gap: 4px;
-        padding: 12px;
+        padding: 18px;
+        flex-direction: column;
+        align-items: stretch;
+        background: rgba(255, 255, 255, 0.92);
         border-radius: 24px;
-        background: rgba(43,33,24,.88);
-        backdrop-filter: blur(20px);
+        box-shadow: var(--shadow);
+        display: none;
       }
 
-      .nav.open .nav-links {
-        display: grid;
+      .nav-links.open {
+        display: flex;
       }
 
       .nav-links a {
-        padding: 13px 16px;
+        padding: 12px 14px;
       }
 
-      .nav-cta {
-        display: none;
-      }
-
-      .hero-grid,
+      .hero-content,
       .about-grid,
+      .service-card,
       .faq-grid,
       .contact-grid {
         grid-template-columns: 1fr;
       }
 
       .hero-card {
-        justify-self: stretch;
+        justify-self: start;
       }
 
-      .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .about-visual {
-        min-height: 460px;
-      }
-
-      .section {
-        padding: 96px 0;
-      }
-    }
-
-    @media (max-width: 680px) {
-      .container {
-        width: min(100% - 28px, 1180px);
-      }
-
-      .hero {
-        padding-top: 120px;
-      }
-
-      h1 {
-        font-size: clamp(48px, 15vw, 74px);
-      }
-
-      .hero-copy p {
-        font-size: 16px;
-      }
-
-      .hero-actions {
-        align-items: stretch;
-      }
-
-      .btn {
-        width: 100%;
-      }
-
-      .hero-card-img {
-        height: 220px;
-      }
-
-      .hero-stats,
-      .feature-row,
-      .services-grid {
+      .booking-panel {
         grid-template-columns: 1fr;
       }
 
-      .about-visual {
-        min-height: 380px;
+      .feature-grid {
+        grid-template-columns: 1fr;
       }
 
-      .service-media {
-        height: 230px;
+      .about-image,
+      .service-media,
+      .map {
+        min-height: 340px;
       }
 
-      .review-card {
-        width: 310px;
-      }
-
-      .map-card,
-      .map-card iframe {
-        min-height: 380px;
+      .faq-note {
+        position: relative;
+        top: auto;
       }
     }
 
-    @media (prefers-reduced-motion: reduce) {
-      *,
-      *::before,
-      *::after {
-        animation-duration: .01ms !important;
-        animation-iteration-count: 1 !important;
-        scroll-behavior: auto !important;
-        transition-duration: .01ms !important;
+    @media (max-width: 560px) {
+      .navbar {
+        top: 10px;
+        width: calc(100% - 18px);
+      }
+
+      .brand {
+        font-size: 0.9rem;
+      }
+
+      .hero {
+        padding-top: 110px;
+      }
+
+      .hero h1 {
+        font-size: 3.55rem;
+      }
+
+      .section {
+        padding: 78px 16px;
+      }
+
+      .service-content,
+      .about-card,
+      .contact-card {
+        padding: 24px;
+      }
+
+      .review-card {
+        width: 300px;
+      }
+
+      .price-row {
+        padding: 15px;
       }
     }
   </style>
 </head>
 
 <body>
-  <nav class="nav" id="nav">
-    <a class="brand" href="#home" aria-label="Oak Massage Home">
-      <span class="brand-mark">O</span>
-      <span>Oak Massage</span>
+  <nav class="navbar">
+    <a href="#home" class="brand" aria-label="Jade Massage Home">
+      <span class="brand-mark">J</span>
+      <span>Jade Massage</span>
     </a>
 
-    <button class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">Menu</button>
 
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#reviews">Reviews</a></li>
-      <li><a href="#faqs">FAQs</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-
-    <a class="nav-cta" href="#contact">Book Now</a>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#booking">Booking</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQs</a>
+      <a href="#contact">Contact</a>
+      <a href="#booking" class="nav-cta">Book Now</a>
+    </div>
   </nav>
 
-  <main>
-    <section class="hero section" id="home">
-      <div class="hero-carousel" aria-hidden="true">
-        <div class="hero-slide active" style="background-image:url('https://i.pinimg.com/1200x/dc/36/fe/dc36feaf9cc11bec29cc3de7834c539e.jpg')"></div>
-        <div class="hero-slide" style="background-image:url('https://i.pinimg.com/1200x/84/cd/b7/84cdb7509c5bacdc80bdf1336985d900.jpg')"></div>
-        <div class="hero-slide" style="background-image:url('https://i.pinimg.com/736x/09/31/eb/0931ebab4602ec51313b49b72bb10c1e.jpg')"></div>
-        <div class="hero-slide" style="background-image:url('https://i.pinimg.com/1200x/2b/b9/25/2bb925cc8ba1e7ec30b8217e143d0335.jpg')"></div>
+  <header class="hero" id="home">
+    <div class="hero-bg" id="heroBg">
+      <img src="https://i.pinimg.com/1200x/dc/36/fe/dc36feaf9cc11bec29cc3de7834c539e.jpg" alt="Relaxing massage room" class="active">
+      <img src="https://i.pinimg.com/736x/4c/2b/cb/4c2bcb39fbc7189277e8e505c2e1bc8f.jpg" alt="Professional body massage">
+      <img src="https://i.pinimg.com/736x/c0/e8/3f/c0e83fc3058518c785d6cfe1b15da601.jpg" alt="Calm spa atmosphere">
+      <img src="https://i.pinimg.com/736x/21/8f/4c/218f4cd988ca278667bd28ff54a577ff.jpg" alt="Full body massage therapy">
+    </div>
+
+    <div class="floating-orb orb-one parallax-soft" data-speed="0.16"></div>
+    <div class="floating-orb orb-two parallax-soft" data-speed="-0.08"></div>
+
+    <div class="hero-content">
+      <div class="parallax-soft" data-speed="-0.05">
+        <div class="eyebrow">Open Daily · 10:00 AM - 10:00 PM</div>
+        <h1>Relax deeper. Feel renewed.</h1>
+        <p>
+          Welcome to Jade Massage, a calm and private wellness space in Renton offering professional full body massage designed to ease tension, support relaxation, and restore balance.
+        </p>
+        <div class="hero-actions">
+          <a href="#booking" class="btn btn-primary">Book Now</a>
+          <a href="tel:2062277189" class="btn btn-secondary">Call 206-227-7189</a>
+        </div>
       </div>
 
-      <div class="container hero-grid">
-        <div class="hero-copy" data-parallax data-speed="-0.16">
-          <div class="hero-kicker reveal">Open Daily · 10:00 AM – 10:00 PM</div>
-          <h1 class="reveal delay-1">Quiet care for a calmer body.</h1>
-          <p class="reveal delay-2">
-            Step into a clean, private, and peaceful massage space in Glendale designed to help you release tension,
-            slow your breathing, and leave feeling restored.
-          </p>
-          <div class="hero-actions reveal delay-3">
-            <a class="btn btn-primary" href="#contact">Book Now</a>
-            <a class="btn btn-ghost" href="tel:+12135885999">Call (213) 588-5999</a>
-          </div>
-        </div>
+      <aside class="hero-card parallax-soft" data-speed="0.12">
+        <h3>Today’s Comfort</h3>
+        <p>Complimentary hot stones are included to help muscles soften, release, and unwind.</p>
+        <ul>
+          <li><span>30 Minutes</span><strong>$40</strong></li>
+          <li><span>60 Minutes</span><strong>$60</strong></li>
+          <li><span>90 Minutes</span><strong>$90</strong></li>
+          <li><span>120 Minutes</span><strong>$120</strong></li>
+        </ul>
+      </aside>
+    </div>
+  </header>
 
-        <aside class="hero-card reveal delay-2" data-parallax data-speed="0.18" aria-label="Oak Massage highlights">
-          <div class="hero-card-inner">
-            <div class="hero-card-img"></div>
-            <div class="hero-card-body">
-              <h3>Relaxation, privacy, and professional care.</h3>
-              <p>Personalized sessions for stress relief, body tension, deep pressure needs, and recovery-focused calm.</p>
-              <div class="hero-stats">
-                <div class="stat">
-                  <strong>7</strong>
-                  <span>Days</span>
-                </div>
-                <div class="stat">
-                  <strong>12h</strong>
-                  <span>Daily</span>
-                </div>
-                <div class="stat">
-                  <strong>Glendale</strong>
-                  <span>CA</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </aside>
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-kicker">About Us</div>
+        <h2>A quiet space made for complete relaxation.</h2>
+        <p>
+          Jade Massage is designed around comfort, privacy, cleanliness, and calm. Each visit is centered on helping you slow down, breathe easier, and leave feeling refreshed.
+        </p>
       </div>
 
-      <div class="scroll-cue" aria-hidden="true"></div>
-    </section>
-
-    <section class="section about" id="about">
-      <div class="float-orb orb-1" data-parallax data-speed="0.22"></div>
-      <div class="float-orb orb-2" data-parallax data-speed="-0.12"></div>
-
-      <div class="container about-grid">
-        <div class="about-visual reveal" data-parallax data-speed="0.08">
-          <div class="about-photo large">
-            <img src="oak1.jpg" alt="Oak Massage interior">
-          </div>
-          <div class="about-photo small">
-            <img src="oak2.jpg" alt="Oak Massage store detail">
-          </div>
+      <div class="about-grid">
+        <div class="about-image reveal">
+          <img src="https://i.pinimg.com/736x/f6/33/48/f6334826491861572c8e532a6a099cdc.jpg" alt="Clean and peaceful massage room" class="parallax-image">
         </div>
 
-        <div class="about-panel reveal delay-1" data-parallax data-speed="-0.05">
-          <div class="eyebrow">About Oak Massage</div>
-          <h2>A quiet place to exhale.</h2>
+        <div class="about-card reveal">
+          <h3 style="font-size: 2.8rem; color: var(--jade-dark); margin-bottom: 18px;">Comfort in every detail</h3>
           <p>
-            Oak Massage is designed around a simple belief: relaxation begins the moment the environment feels clean,
-            private, and calm. Every room is kept peaceful and uncluttered so your body can settle before the session begins.
+            Our environment is clean, peaceful, and private, creating a soothing retreat away from daily stress. Soft lighting, calm surroundings, and attentive care help create a restorative experience from the moment you arrive.
           </p>
           <p>
-            Our space is made for focused therapeutic rest — soft lighting, a quiet atmosphere, and a soothing rhythm
-            that helps you disconnect from daily stress and reconnect with comfort.
+            We focus on simple, effective relaxation through full body massage. Whether you are feeling tired, tense, or simply need quiet time for yourself, Jade Massage offers a welcoming place to reset.
           </p>
 
-          <div class="feature-row">
-            <div class="mini-feature">
+          <div class="feature-grid">
+            <div class="feature">
               <strong>Clean</strong>
-              <span>Fresh, orderly rooms prepared for comfort.</span>
+              <span>A refreshed, comfortable setting for every visit.</span>
             </div>
-            <div class="mini-feature">
+            <div class="feature">
               <strong>Private</strong>
-              <span>A calm setting for uninterrupted relaxation.</span>
+              <span>Peaceful treatment rooms for personal relaxation.</span>
             </div>
-            <div class="mini-feature">
+            <div class="feature">
               <strong>Quiet</strong>
-              <span>Soft atmosphere that supports deep rest.</span>
+              <span>A calm atmosphere designed to help you unwind.</span>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section services" id="services">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="eyebrow">Services & Pricing</div>
-          <h2>Choose the care your body needs today.</h2>
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-kicker">Services & Pricing</div>
+        <h2>Full Body Massage with complimentary hot stones.</h2>
+        <p>
+          Our service menu is simple and focused: professional full body massage sessions available in multiple durations, with free hot stones included for added warmth and relaxation.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card reveal">
+          <div class="service-media carousel" data-carousel>
+            <span class="service-badge">Free Hot Stones</span>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1L-0O6Juxasb8QicSAXdnWLSQjLrVvGVr8HPij_dvsgW7cWCeMVBGB-12hqGhPUkx5oA&usqp=CAU" alt="Full body massage" class="active">
+            <img src="https://i.pinimg.com/1200x/dc/36/fe/dc36feaf9cc11bec29cc3de7834c539e.jpg" alt="Relaxing body work massage">
+            <img src="https://i.pinimg.com/736x/4c/2b/cb/4c2bcb39fbc7189277e8e505c2e1bc8f.jpg" alt="Professional full body massage">
+            <img src="https://i.pinimg.com/736x/c0/e8/3f/c0e83fc3058518c785d6cfe1b15da601.jpg" alt="Massage therapy session">
+            <img src="https://i.pinimg.com/736x/21/8f/4c/218f4cd988ca278667bd28ff54a577ff.jpg" alt="Body massage relaxation">
+          </div>
+
+          <div class="service-content">
+            <div class="section-kicker">Signature Service</div>
+            <h3>Full Body Massage</h3>
+            <p>
+              A full body massage is ideal for guests looking to release everyday tension, reduce stress, improve comfort, and enjoy deep relaxation. It is a great choice for tired muscles, busy schedules, and anyone needing a peaceful reset.
+            </p>
+
+            <div class="hot-stone">● Complimentary Hot Stones Included</div>
+
+            <div class="pricing-list" aria-label="Full body massage pricing">
+              <div class="price-row">
+                <span>30 Minutes</span>
+                <span>$40</span>
+              </div>
+              <div class="price-row">
+                <span>60 Minutes</span>
+                <span>$60</span>
+              </div>
+              <div class="price-row">
+                <span>90 Minutes</span>
+                <span>$90</span>
+              </div>
+              <div class="price-row">
+                <span>120 Minutes</span>
+                <span>$120</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section booking" id="booking">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-kicker">Booking</div>
+        <h2>Ready to relax?</h2>
+        <p>
+          Call us to reserve your preferred session time. Walk-ins may be available, but calling ahead is recommended.
+        </p>
+      </div>
+
+      <div class="booking-panel">
+        <div class="booking-card reveal">
+          <h3>Call</h3>
+          <p><a href="tel:2062277189" style="font-size: 1.35rem; font-weight: 900;">206-227-7189</a></p>
+        </div>
+
+        <div class="booking-card reveal">
+          <h3>Hours</h3>
+          <p>Open daily from<br><strong>10:00 AM - 10:00 PM</strong></p>
+        </div>
+
+        <div class="booking-card reveal">
+          <h3>Bonus</h3>
+          <p>Enjoy <strong>free hot stones</strong> with your full body massage session.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section testimonials" id="reviews">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-kicker">Testimonials</div>
+        <h2>Kind words from relaxed guests.</h2>
+        <p>
+          Guests appreciate our clean rooms, peaceful atmosphere, convenient hours, and relaxing full body massage experience.
+        </p>
+      </div>
+    </div>
+
+    <div class="marquee-wrap reveal">
+      <div class="marquee">
+        <div class="review-card"><div class="stars">★★★★★</div><p>“The space was quiet, clean, and very relaxing. I left feeling lighter and much less tense.”</p><strong>Emily R.</strong></div>
+        <div class="review-card"><div class="stars">★★★★★</div><p>“Great full body massage and the free hot stones made the session feel extra soothing.”</p><strong>Jason M.</strong></div>
+        <div class="review-card"><div class="stars">★★★★★</div><p>“Easy to call and book. The atmosphere was calm and private, exactly what I needed after work.”</p><strong>Monica L.</strong></div>
+        <div class="review-card"><div class="stars">★★★★★</div><p>“Very comfortable experience. I appreciated the clean room and peaceful music.”</p><strong>Daniel K.</strong></div>
+        <div class="review-card"><div class="stars">★★★★★</div><p>“The 90-minute massage was wonderful. My shoulders and back felt so much better afterward.”</p><strong>Sara T.</strong></div>
+
+        <div class="review-card"><div class="stars">★★★★★</div><p>“The space was quiet, clean, and very relaxing. I left feeling lighter and much less tense.”</p><strong>Emily R.</strong></div>
+        <div class="review-card"><div class="stars">★★★★★</div><p>“Great full body massage and the free hot stones made the session feel extra soothing.”</p><strong>Jason M.</strong></div>
+        <div class="review-card"><div class="stars">★★★★★</div><p>“Easy to call and book. The atmosphere was calm and private, exactly what I needed after work.”</p><strong>Monica L.</strong></div>
+        <div class="review-card"><div class="stars">★★★★★</div><p>“Very comfortable experience. I appreciated the clean room and peaceful music.”</p><strong>Daniel K.</strong></div>
+        <div class="review-card"><div class="stars">★★★★★</div><p>“The 90-minute massage was wonderful. My shoulders and back felt so much better afterward.”</p><strong>Sara T.</strong></div>
+      </div>
+
+      <div class="marquee reverse">
+        <div class="review-card"><div class="stars">★★★★★</div><p>“A peaceful place with fair prices. The 60-minute session was perfect for stress relief.”</p><strong>Anthony W.</strong></div>
+        <div class="review-card"><div class="stars">★★★★★</div><p>“I liked the simple menu and clear pricing. The massage felt professional and relaxing.”</p><strong>Rachel C.</strong></div>
+        <div class="review-card"><div class="stars">★★★★★</div><p>“The hot stones were a great touch. Warm, calming, and very helpful for tight muscles.”</p><strong>Kevin H.</strong></div>
+        <div class="review-card"><div class="stars">★★★★★</div><p>“Clean, quiet, and welcoming. I will definitely come back when I need to unwind.”</p><strong>Linda P.</strong></div>
+        <div class="review-card"><div class="stars">★★★★★</div><p>“Convenient location in Renton and open late, which makes it easy to visit after a long day.”</p><strong>Grace N.</strong></div>
+
+        <div class="review-card"><div class="stars">★★★★★</div><p>“A peaceful place with fair prices. The 60-minute session was perfect for stress relief.”</p><strong>Anthony W.</strong></div>
+        <div class="review-card"><div class="stars">★★★★★</div><p>“I liked the simple menu and clear pricing. The massage felt professional and relaxing.”</p><strong>Rachel C.</strong></div>
+        <div class="review-card"><div class="stars">★★★★★</div><p>“The hot stones were a great touch. Warm, calming, and very helpful for tight muscles.”</p><strong>Kevin H.</strong></div>
+        <div class="review-card"><div class="stars">★★★★★</div><p>“Clean, quiet, and welcoming. I will definitely come back when I need to unwind.”</p><strong>Linda P.</strong></div>
+        <div class="review-card"><div class="stars">★★★★★</div><p>“Convenient location in Renton and open late, which makes it easy to visit after a long day.”</p><strong>Grace N.</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="faq-grid">
+        <div class="faq-note reveal">
+          <h3>Before your visit</h3>
           <p>
-            Our service menu is focused, practical, and built around relaxation, body tension relief, and simple wellness add-ons.
+            A little preparation helps you enjoy a smoother, calmer massage experience. Here are answers to common questions from first-time guests.
           </p>
         </div>
 
-        <div class="services-grid">
-          <article class="service-card reveal" data-carousel>
-            <div class="service-media">
-              <div class="service-slide active" style="background-image:url('https://i.pinimg.com/1200x/dc/36/fe/dc36feaf9cc11bec29cc3de7834c539e.jpg')"></div>
-              <div class="service-slide" style="background-image:url('https://i.pinimg.com/736x/4c/2b/cb/4c2bcb39fbc7189277e8e505c2e1bc8f.jpg')"></div>
-              <div class="service-slide" style="background-image:url('https://i.pinimg.com/736x/c0/e8/3f/c0e83fc3058518c785d6cfe1b15da601.jpg')"></div>
-              <div class="carousel-dots"></div>
-            </div>
-            <div class="service-body">
-              <div class="service-topline">
-                <h3>Combination</h3>
-                <span class="price">$60</span>
-              </div>
-              <span class="duration">Session length varies</span>
-              <p>A balanced session for guests who want a mix of soothing relaxation and focused body work. Ideal when you feel generally tired, tense, or need an easy reset.</p>
-            </div>
-          </article>
-
-          <article class="service-card reveal delay-1" data-carousel>
-            <div class="service-media">
-              <div class="service-slide active" style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1L-0O6Juxasb8QicSAXdnWLSQjLrVvGVr8HPij_dvsgW7cWCeMVBGB-12hqGhPUkx5oA&usqp=CAU')"></div>
-              <div class="service-slide" style="background-image:url('https://i.pinimg.com/736x/21/8f/4c/218f4cd988ca278667bd28ff54a577ff.jpg')"></div>
-              <div class="service-slide" style="background-image:url('https://i.pinimg.com/736x/97/dc/96/97dc9699bc6c850ecd8776eaee3b7898.jpg')"></div>
-              <div class="service-slide" style="background-image:url('https://i.pinimg.com/736x/f6/33/48/f6334826491861572c8e532a6a099cdc.jpg')"></div>
-              <div class="service-slide" style="background-image:url('https://i.pinimg.com/736x/e6/0b/e7/e60be71086090d2d3f2737b2291242a9.jpg')"></div>
-              <div class="carousel-dots"></div>
-            </div>
-            <div class="service-body">
-              <div class="service-topline">
-                <h3>Relax Massage</h3>
-                <span class="price">$40–$100</span>
-              </div>
-              <span class="duration">30 / 60 / 90 minutes</span>
-              <p>A calming massage designed to soften everyday tension, quiet the nervous system, and help you feel lighter from head to toe. Choose the session length that fits your schedule and recovery needs.</p>
-
-              <ul class="pricing-list">
-                <li><span>30 min relax massage</span><strong>$40</strong></li>
-                <li><span>60 min relax massage</span><strong>$60</strong></li>
-                <li><span>90 min relax massage</span><strong>$100</strong></li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="service-card reveal delay-2" data-carousel>
-            <div class="service-media">
-              <div class="service-slide active" style="background-image:url('https://i.pinimg.com/736x/86/47/ef/8647ef5b51553a8e57ca32e6b2ec74f0.jpg')"></div>
-              <div class="service-slide" style="background-image:url('https://i.pinimg.com/736x/a4/c5/f0/a4c5f0fb2704f75aa94a247e18a4af14.jpg')"></div>
-              <div class="service-slide" style="background-image:url('https://i.pinimg.com/736x/85/e4/e0/85e4e0455458e84ff5b39582cf45a340.jpg')"></div>
-              <div class="service-slide" style="background-image:url('https://i.pinimg.com/1200x/cb/a2/38/cba2382cc3ca28d467b85d939121c8ef.jpg')"></div>
-              <div class="carousel-dots"></div>
-            </div>
-            <div class="service-body">
-              <div class="service-topline">
-                <h3>Deep Tissue Massage</h3>
-                <span class="price">$70</span>
-              </div>
-              <span class="duration">60 minutes</span>
-              <p>Focused pressure for stubborn tightness, heavy muscle fatigue, and deeper areas of discomfort. Great for guests who prefer firm, targeted relief.</p>
-            </div>
-          </article>
-
-          <article class="service-card reveal" data-carousel>
-            <div class="service-media">
-              <div class="service-slide active" style="background-image:url('https://i.pinimg.com/736x/09/31/eb/0931ebab4602ec51313b49b72bb10c1e.jpg')"></div>
-              <div class="service-slide" style="background-image:url('https://i.pinimg.com/736x/a6/b4/26/a6b4261509788cc843fafcac56d38c51.jpg')"></div>
-              <div class="service-slide" style="background-image:url('https://i.pinimg.com/1200x/2b/81/ad/2b81ad4a2b574b076d5676db9ba13418.jpg')"></div>
-              <div class="carousel-dots"></div>
-            </div>
-            <div class="service-body">
-              <div class="service-topline">
-                <h3>Four Hands Massage</h3>
-                <span class="price">$120</span>
-              </div>
-              <span class="duration">60 minutes</span>
-              <p>A synchronized massage experience that creates immersive relaxation and broad tension relief. Best for guests who want a deeply indulgent reset.</p>
-            </div>
-          </article>
-
-          <article class="service-card reveal delay-1" data-carousel>
-            <div class="service-media">
-              <div class="service-slide active" style="background-image:url('https://i.pinimg.com/1200x/2b/b9/25/2bb925cc8ba1e7ec30b8217e143d0335.jpg')"></div>
-              <div class="service-slide" style="background-image:url('https://i.pinimg.com/1200x/fa/20/60/fa206044fee8dd38cebed21c4d4f616d.jpg')"></div>
-              <div class="service-slide" style="background-image:url('https://i.pinimg.com/1200x/72/f0/53/72f053decc513a9d6882798d8689f0e5.jpg')"></div>
-              <div class="service-slide" style="background-image:url('https://i.pinimg.com/1200x/f2/c8/ce/f2c8ce710d81304f810188885b9c6aa2.jpg')"></div>
-              <div class="carousel-dots"></div>
-            </div>
-            <div class="service-body">
-              <div class="service-topline">
-                <h3>Cupping</h3>
-                <span class="price">$40</span>
-              </div>
-              <span class="duration">Wellness service</span>
-              <p>A focused wellness option for guests dealing with areas of tightness, heaviness, or restricted-feeling muscles. A practical choice for targeted body relief.</p>
-            </div>
-          </article>
-
-          <article class="service-card reveal delay-2" data-carousel>
-            <div class="service-media">
-              <div class="service-slide active" style="background-image:url('https://i.pinimg.com/736x/6d/7d/78/6d7d781d25c23f706ec67b36589bf5ae.jpg')"></div>
-              <div class="service-slide" style="background-image:url('https://i.pinimg.com/1200x/98/b2/ca/98b2ca19c1254a1b9e5b163ecf8f3bb6.jpg')"></div>
-              <div class="service-slide" style="background-image:url('https://i.pinimg.com/1200x/fe/60/07/fe60073974213c52c26e52e1b0a51e8f.jpg')"></div>
-              <div class="service-slide" style="background-image:url('https://i.pinimg.com/1200x/ef/1d/31/ef1d31b8299b7ac8f3bab01a44df9ece.jpg')"></div>
-              <div class="carousel-dots"></div>
-            </div>
-            <div class="service-body">
-              <div class="service-topline">
-                <h3>Guasha</h3>
-                <span class="price">$40</span>
-              </div>
-              <span class="duration">Wellness service</span>
-              <p>A traditional body-care option for guests seeking targeted surface-level release and a refreshed feeling in areas that hold everyday tension.</p>
-            </div>
-          </article>
-
-          <article class="service-card reveal" data-carousel>
-            <div class="service-media">
-              <div class="service-slide active" style="background-image:url('https://i.pinimg.com/736x/c8/07/c4/c807c4647d26dd39335f13e834586a22.jpg')"></div>
-              <div class="service-slide" style="background-image:url('https://i.pinimg.com/736x/3f/40/a8/3f40a894a04a10469e8a12e5f8afd4f8.jpg')"></div>
-              <div class="service-slide" style="background-image:url('https://i.pinimg.com/1200x/45/60/3b/45603b2af0a2b91d6a71314b0585ad1a.jpg')"></div>
-              <div class="service-slide" style="background-image:url('https://i.pinimg.com/736x/aa/3e/08/aa3e08854240e1f918a8edd6af3a0d74.jpg')"></div>
-              <div class="carousel-dots"></div>
-            </div>
-            <div class="service-body">
-              <div class="service-topline">
-                <h3>Essential Oil Add-on</h3>
-                <span class="price">+$20</span>
-              </div>
-              <span class="duration">Massage enhancement</span>
-              <p>Add aromatic comfort to your session for a softer, more soothing experience. Ideal for guests who want deeper calm and a spa-like sensory finish.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section gallery" id="gallery">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="eyebrow">Store Gallery</div>
-          <h2>A glimpse of Oak Massage.</h2>
-          <p>Explore the calm, simple, and welcoming environment designed for quiet relaxation in Glendale.</p>
-        </div>
-
-        <div class="masonry reveal">
-          <a class="masonry-item" href="oak1.jpg" target="_blank" rel="noopener">
-            <img src="oak1.jpg" alt="Oak Massage store photo 1">
-          </a>
-
-          <a class="masonry-item" href="oak2.jpg" target="_blank" rel="noopener">
-            <img src="oak2.jpg" alt="Oak Massage store photo 2">
-          </a>
-
-          <a class="masonry-item" href="oak3.jpg" target="_blank" rel="noopener">
-            <img src="oak3.jpg" alt="Oak Massage store photo 3">
-          </a>
-
-          <a class="masonry-item" href="oak4.jpg" target="_blank" rel="noopener">
-            <img src="oak4.jpg" alt="Oak Massage store photo 4">
-          </a>
-
-          <a class="masonry-item" href="oak5.jpg" target="_blank" rel="noopener">
-            <img src="oak5.jpg" alt="Oak Massage store photo 5">
-          </a>
-
-          <a class="masonry-item" href="oak6.jpg" target="_blank" rel="noopener">
-            <img src="oak6.jpg" alt="Oak Massage store photo 6">
-          </a>
-
-          <a class="masonry-item" href="oak7.jpg" target="_blank" rel="noopener">
-            <img src="oak7.jpg" alt="Oak Massage store photo 7">
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section reviews" id="reviews">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="eyebrow">Guest Reviews</div>
-          <h2>What guests love about Oak Massage.</h2>
-          <p>Calm rooms, easy booking, fair prices, and sessions that help everyday tension finally let go.</p>
-        </div>
-      </div>
-
-      <div class="marquee-wrap reveal">
-        <div class="marquee">
-          <div class="review-card"><div class="stars">★★★★★</div><p>“Clean, quiet, and exactly what I needed after a long work week. The pressure was comfortable and I left feeling lighter.”</p><div class="review-author">— Amanda R.</div></div>
-          <div class="review-card"><div class="stars">★★★★★</div><p>“The room felt private and peaceful. I booked a relax massage and it helped my shoulders so much.”</p><div class="review-author">— Kevin L.</div></div>
-          <div class="review-card"><div class="stars">★★★★★</div><p>“Great value and very convenient hours. I called the same day and they made the whole visit easy.”</p><div class="review-author">— Sophia M.</div></div>
-          <div class="review-card"><div class="stars">★★★★★</div><p>“I tried the deep tissue massage and the firm pressure was exactly right. My back felt much better afterward.”</p><div class="review-author">— Daniel C.</div></div>
-          <div class="review-card"><div class="stars">★★★★★</div><p>“Peaceful atmosphere, no rushing, and the space was very clean. I will definitely come back.”</p><div class="review-author">— Natalie P.</div></div>
-
-          <div class="review-card"><div class="stars">★★★★★</div><p>“Clean, quiet, and exactly what I needed after a long work week. The pressure was comfortable and I left feeling lighter.”</p><div class="review-author">— Amanda R.</div></div>
-          <div class="review-card"><div class="stars">★★★★★</div><p>“The room felt private and peaceful. I booked a relax massage and it helped my shoulders so much.”</p><div class="review-author">— Kevin L.</div></div>
-          <div class="review-card"><div class="stars">★★★★★</div><p>“Great value and very convenient hours. I called the same day and they made the whole visit easy.”</p><div class="review-author">— Sophia M.</div></div>
-          <div class="review-card"><div class="stars">★★★★★</div><p>“I tried the deep tissue massage and the firm pressure was exactly right. My back felt much better afterward.”</p><div class="review-author">— Daniel C.</div></div>
-          <div class="review-card"><div class="stars">★★★★★</div><p>“Peaceful atmosphere, no rushing, and the space was very clean. I will definitely come back.”</p><div class="review-author">— Natalie P.</div></div>
-        </div>
-
-        <div class="marquee reverse">
-          <div class="review-card"><div class="stars">★★★★★</div><p>“The four hands massage was incredibly relaxing. It felt smooth, balanced, and very calming from start to finish.”</p><div class="review-author">— Marcus J.</div></div>
-          <div class="review-card"><div class="stars">★★★★★</div><p>“I appreciate that they are open late. The massage helped me unwind after a stressful day.”</p><div class="review-author">— Emily T.</div></div>
-          <div class="review-card"><div class="stars">★★★★★</div><p>“Simple, professional, and comfortable. The location is easy to find and the whole place feels very serene.”</p><div class="review-author">— Brian H.</div></div>
-          <div class="review-card"><div class="stars">★★★★★</div><p>“I added essential oil and it made the session feel extra soothing. Great option when you want deeper relaxation.”</p><div class="review-author">— Olivia S.</div></div>
-          <div class="review-card"><div class="stars">★★★★★</div><p>“Very fair pricing for Glendale. I booked the 90 minute relax massage and felt completely renewed.”</p><div class="review-author">— Jason W.</div></div>
-
-          <div class="review-card"><div class="stars">★★★★★</div><p>“The four hands massage was incredibly relaxing. It felt smooth, balanced, and very calming from start to finish.”</p><div class="review-author">— Marcus J.</div></div>
-          <div class="review-card"><div class="stars">★★★★★</div><p>“I appreciate that they are open late. The massage helped me unwind after a stressful day.”</p><div class="review-author">— Emily T.</div></div>
-          <div class="review-card"><div class="stars">★★★★★</div><p>“Simple, professional, and comfortable. The location is easy to find and the whole place feels very serene.”</p><div class="review-author">— Brian H.</div></div>
-          <div class="review-card"><div class="stars">★★★★★</div><p>“I added essential oil and it made the session feel extra soothing. Great option when you want deeper relaxation.”</p><div class="review-author">— Olivia S.</div></div>
-          <div class="review-card"><div class="stars">★★★★★</div><p>“Very fair pricing for Glendale. I booked the 90 minute relax massage and felt completely renewed.”</p><div class="review-author">— Jason W.</div></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section faqs" id="faqs">
-      <div class="container faq-grid">
-        <div class="section-header reveal">
-          <div class="eyebrow">FAQs</div>
-          <h2>Before your visit.</h2>
-          <p>Helpful answers so your experience feels smooth from arrival to checkout.</p>
-        </div>
-
-        <div class="faq-card reveal delay-1">
-          <div class="faq-item active">
-            <button class="faq-question" type="button">
-              <span>How early should I arrive?</span>
-              <span>+</span>
-            </button>
-            <div class="faq-answer">
-              <p>Please arrive about 10 minutes early, especially for your first visit. This gives you time to check in, choose your service, and settle into a calm state before your session begins.</p>
-            </div>
+        <div>
+          <div class="section-header reveal" style="margin-bottom: 26px;">
+            <div class="section-kicker">FAQs</div>
+            <h2>Common questions</h2>
           </div>
 
-          <div class="faq-item">
-            <button class="faq-question" type="button">
-              <span>Can I get a massage if I have an injury?</span>
-              <span>+</span>
-            </button>
-            <div class="faq-answer">
-              <p>If you have a recent injury, serious pain, swelling, or a medical condition, please consult your healthcare provider first. Let us know about sensitive areas before the session so pressure can be adjusted or avoided.</p>
+          <div class="accordion reveal">
+            <div class="faq-item active">
+              <button class="faq-question">
+                How early should I arrive?
+                <span>+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Please arrive 5–10 minutes early so you have time to check in, settle in, and begin your session feeling relaxed.</p>
+              </div>
             </div>
-          </div>
 
-          <div class="faq-item">
-            <button class="faq-question" type="button">
-              <span>What is your cancellation policy?</span>
-              <span>+</span>
-            </button>
-            <div class="faq-answer">
-              <p>If you need to cancel or change your appointment, please call as early as possible so we can update the schedule and offer the time to another guest.</p>
+            <div class="faq-item">
+              <button class="faq-question">
+                Can I get a massage if I have an injury?
+                <span>+</span>
+              </button>
+              <div class="faq-answer">
+                <p>If you have an injury, recent surgery, or medical concern, please consult your healthcare provider first and let us know before your session begins.</p>
+              </div>
             </div>
-          </div>
 
-          <div class="faq-item">
-            <button class="faq-question" type="button">
-              <span>Is there parking available?</span>
-              <span>+</span>
-            </button>
-            <div class="faq-answer">
-              <p>Parking availability may vary by time of day. Please allow a few extra minutes when arriving, especially during busier hours around S. Brand Blvd.</p>
+            <div class="faq-item">
+              <button class="faq-question">
+                What is your cancellation policy?
+                <span>+</span>
+              </button>
+              <div class="faq-answer">
+                <p>If you need to cancel or reschedule, please call as early as possible so we can adjust the schedule and assist other guests.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                Is there parking available?
+                <span>+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Parking availability may vary by time of day. Please call us before your appointment if you would like current parking guidance.</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section contact" id="contact">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="eyebrow">Contact & Location</div>
-          <h2>Visit Oak Massage in Glendale.</h2>
-          <p>Open seven days a week for convenient relaxation, body work, and wellness services.</p>
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-kicker">Contact & Location</div>
+        <h2>Visit Jade Massage in Renton.</h2>
+        <p>
+          We are located on SW 41st Street in Renton, Washington. Call us to book your full body massage.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card reveal">
+          <h3 style="font-size: 2.7rem; color: var(--jade-dark); margin-bottom: 10px;">Jade Massage</h3>
+          <p style="color: var(--muted); line-height: 1.8;">
+            Professional full body massage in a quiet, clean, and relaxing setting.
+          </p>
+
+          <div class="contact-list">
+            <div class="contact-item">
+              <small>Address</small>
+              <strong>101 SW 41st Street<br>Renton, WA 98056</strong>
+            </div>
+
+            <div class="contact-item">
+              <small>Phone</small>
+              <a href="tel:2062277189">206-227-7189</a>
+            </div>
+
+            <div class="contact-item">
+              <small>Hours</small>
+              <strong>10:00 AM - 10:00 PM</strong>
+            </div>
+
+            <div class="contact-item">
+              <small>Service Highlight</small>
+              <strong>Full Body Massage · Free Hot Stones</strong>
+            </div>
+          </div>
         </div>
 
-        <div class="contact-grid">
-          <div class="contact-info reveal" data-parallax data-speed="0.07">
-            <h3>Oak Massage</h3>
-            <p style="margin-top:14px;">A clean, private, and quiet massage space for daily relaxation and therapeutic comfort.</p>
-
-            <ul class="info-list">
-              <li>
-                <strong>Address</strong>
-                <span>1725 S. Brand Blvd.<br>Glendale, CA 91204</span>
-              </li>
-              <li>
-                <strong>Tel</strong>
-                <a href="tel:+12135885999">(213) 588-5999</a>
-              </li>
-              <li>
-                <strong>Business Hours</strong>
-                <span>Open 7 days<br>10:00 AM – 10:00 PM</span>
-              </li>
-            </ul>
-
-            <a class="btn btn-primary" style="margin-top:28px;" href="tel:+12135885999">Call to Book</a>
-          </div>
-
-          <div class="map-card reveal delay-1">
-            <iframe
-              title="Google Map to Oak Massage"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps?q=1725%20S.%20Brand%20Blvd.%20Glendale%2C%20CA%2091204&output=embed">
-            </iframe>
-          </div>
+        <div class="map reveal">
+          <iframe
+            title="Google Map for Jade Massage"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=101%20SW%2041st%20Street%2C%20Renton%2C%20WA%2098056&output=embed">
+          </iframe>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
   <footer>
-    © <span id="year"></span> Oak Massage. All rights reserved.
+    <p>© <span id="year"></span> Jade Massage · 101 SW 41st Street, Renton, WA 98056 · 206-227-7189</p>
   </footer>
 
   <script>
-    const nav = document.getElementById("nav");
-    const menuBtn = document.getElementById("menuBtn");
-    const sections = [...document.querySelectorAll("main section[id]")];
+    const navLinks = document.getElementById("navLinks");
+    const mobileToggle = document.getElementById("mobileToggle");
+
+    mobileToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => navLinks.classList.remove("open"));
+    });
 
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    menuBtn.addEventListener("click", () => {
-      nav.classList.toggle("open");
-      menuBtn.textContent = nav.classList.contains("open") ? "×" : "☰";
-    });
+    function rotateImages(selector, interval = 4200) {
+      const groups = document.querySelectorAll(selector);
+      groups.forEach(group => {
+        const images = group.querySelectorAll("img");
+        let index = 0;
 
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
-      link.addEventListener("click", e => {
-        const target = document.querySelector(link.getAttribute("href"));
-        if (!target) return;
-        e.preventDefault();
-        nav.classList.remove("open");
-        menuBtn.textContent = "☰";
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
+        if (images.length <= 1) return;
+
+        setInterval(() => {
+          images[index].classList.remove("active");
+          index = (index + 1) % images.length;
+          images[index].classList.add("active");
+        }, interval);
       });
-    });
+    }
 
-    const heroSlides = [...document.querySelectorAll(".hero-slide")];
-    let heroIndex = 0;
+    rotateImages("#heroBg", 4600);
+    rotateImages("[data-carousel]", 3600);
 
-    setInterval(() => {
-      heroSlides[heroIndex].classList.remove("active");
-      heroIndex = (heroIndex + 1) % heroSlides.length;
-      heroSlides[heroIndex].classList.add("active");
-    }, 5200);
-
-    document.querySelectorAll("[data-carousel]").forEach((card, cardIndex) => {
-      const slides = [...card.querySelectorAll(".service-slide")];
-      const dotsWrap = card.querySelector(".carousel-dots");
-      let current = 0;
-
-      slides.forEach((_, index) => {
-        const dot = document.createElement("span");
-        if (index === 0) dot.classList.add("active");
-        dotsWrap.appendChild(dot);
-      });
-
-      const dots = [...dotsWrap.children];
-
-      if (slides.length <= 1) return;
-
-      setInterval(() => {
-        slides[current].classList.remove("active");
-        dots[current].classList.remove("active");
-        current = (current + 1) % slides.length;
-        slides[current].classList.add("active");
-        dots[current].classList.add("active");
-      }, 3600 + cardIndex * 260);
-    });
-
-    const revealObserver = new IntersectionObserver(entries => {
+    const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
-          revealObserver.unobserve(entry.target);
         }
       });
     }, { threshold: 0.16 });
@@ -1653,82 +1310,33 @@
     document.querySelectorAll(".faq-question").forEach(button => {
       button.addEventListener("click", () => {
         const item = button.closest(".faq-item");
-        const answer = item.querySelector(".faq-answer");
-        const active = item.classList.contains("active");
-
-        document.querySelectorAll(".faq-item").forEach(faq => {
-          faq.classList.remove("active");
-          faq.querySelector(".faq-answer").style.maxHeight = null;
+        document.querySelectorAll(".faq-item").forEach(other => {
+          if (other !== item) other.classList.remove("active");
         });
-
-        if (!active) {
-          item.classList.add("active");
-          answer.style.maxHeight = answer.scrollHeight + "px";
-        }
+        item.classList.toggle("active");
       });
     });
 
-    document.querySelectorAll(".faq-item.active .faq-answer").forEach(answer => {
-      answer.style.maxHeight = answer.scrollHeight + "px";
-    });
-
-    const parallaxEls = [...document.querySelectorAll("[data-parallax]")];
+    const parallaxItems = document.querySelectorAll(".parallax-soft");
+    const parallaxImages = document.querySelectorAll(".parallax-image");
 
     function updateParallax() {
-      const y = window.scrollY;
-      const vh = window.innerHeight;
+      const scrollY = window.scrollY;
 
-      nav.classList.toggle("scrolled", y > 32);
-
-      parallaxEls.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        const speed = parseFloat(el.dataset.speed || "0.08");
-        const centerOffset = (rect.top + rect.height / 2 - vh / 2);
-        const move = centerOffset * speed;
-        el.style.transform = `translate3d(0, ${move}px, 0)`;
+      parallaxItems.forEach(item => {
+        const speed = parseFloat(item.dataset.speed || 0.08);
+        item.style.setProperty("--parallax", `${scrollY * speed}px`);
       });
 
-      const hero = document.querySelector(".hero");
-      if (hero) {
-        hero.style.setProperty("--parallax-slow", `${y * 0.10}px`);
-        hero.style.setProperty("--parallax-fast", `${y * -0.08}px`);
-      }
-
-      const current = sections
-        .map(section => {
-          const rect = section.getBoundingClientRect();
-          return { id: section.id, distance: Math.abs(rect.top - 120) };
-        })
-        .sort((a, b) => a.distance - b.distance)[0];
-
-      if (current) {
-        document.querySelectorAll(".nav-links a").forEach(a => {
-          a.classList.toggle("active", a.getAttribute("href") === `#${current.id}`);
-        });
-      }
-
-      requestAnimationFrame(() => {});
+      parallaxImages.forEach(img => {
+        const rect = img.getBoundingClientRect();
+        const offset = (rect.top - window.innerHeight / 2) * -0.06;
+        img.style.setProperty("--py", `${offset}px`);
+      });
     }
 
-    let ticking = false;
-
-    window.addEventListener("scroll", () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          updateParallax();
-          ticking = false;
-        });
-        ticking = true;
-      }
-    }, { passive: true });
-
-    window.addEventListener("resize", () => {
-      document.querySelectorAll(".faq-item.active .faq-answer").forEach(answer => {
-        answer.style.maxHeight = answer.scrollHeight + "px";
-      });
-      updateParallax();
-    });
-
+    window.addEventListener("scroll", updateParallax, { passive: true });
+    window.addEventListener("resize", updateParallax);
     updateParallax();
   </script>
 </body>
